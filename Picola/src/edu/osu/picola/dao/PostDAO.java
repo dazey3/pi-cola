@@ -182,6 +182,22 @@ public class PostDAO extends DAO {
 		return post;
 	}
 	
+	/*
+	 * TODO test this not 100% confident on it
+	 */
+	public void updatePost(Post post) {
+		String update = "UPATE post SET post_id = '" + post.getPost_id()
+					  + "', post_text = '" + post.getPost_text() 
+					  + "', post_time = " + post.getPost_time()
+					  + ", MP_bit = " + post.isMP_bit()
+					  + ", BP_bit = " + post.isBP_bit()
+					  + ", summary_bit = "+ post.isSummary_bit()
+					  + ", is_flagged = "+ post.isSummary_bit()
+					  + ", '" + post.getUser_id()
+					  + "', '" + post.getGroup_id()
+					  + "'";
+		updateDB(update);
+	}
 	
 	/**
 	 * Removes a single post
