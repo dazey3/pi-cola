@@ -21,6 +21,15 @@ public class Course {
 		}
 	}
 
+	public Course(int course_id, String course_title,
+				String course_descr, int semester_id) {
+		this.course_id = course_id;
+		this.course_title = course_title;
+		this.course_descr = course_descr;
+		this.semester_id = semester_id;
+	}
+	
+	
 	public int getCourse_id() {
 		return course_id;
 	}

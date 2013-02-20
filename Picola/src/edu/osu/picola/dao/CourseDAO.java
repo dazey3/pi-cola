@@ -20,10 +20,10 @@ public class CourseDAO extends DAO {
 	public void insertCourse(Course course) {
 		String insert = "INSERT INTO course (course_id, course_title, course_descr, semester_id)"
 			           + " VALUES('"
-			           + course.getCourse_id()+"'" 
-			           + "', '" + course.getCourse_title() +"'"
-			           + "', '" + course.getCourse_descr() +"'"
-			           + "', '" + course.getSemester_id() +"'";
+			           + course.getCourse_id() 
+			           + "', '" + course.getCourse_title()
+			           + "', '" + course.getCourse_descr()
+			           + "', '" + course.getSemester_id() +"')";
 		insertDB(insert);
 	}
 	

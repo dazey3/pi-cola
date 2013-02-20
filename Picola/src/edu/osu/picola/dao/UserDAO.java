@@ -34,7 +34,6 @@ public class UserDAO extends DAO{
 		return readOnlyRoster;
 	}
 	
-	
 	public List<User> getReadOnly(int courseID) {
 		List<User> readOnlyRoster = new ArrayList<User>();
 
@@ -58,9 +57,9 @@ public class UserDAO extends DAO{
 	public List<User> getClassRoster(int courseID) {
 		List<User> courseRoster = new ArrayList<User>();
 
-		String query = "SELECT * FROM Enrolled WHERE course_id ='"
+		String query = "SELECT * FROM enrolled WHERE course_id ='"
 				+ courseID + "'";
-
+		System.out.println("query = "+query);
 		ResultSet rs = queryDB(query);
 		
 		try {
@@ -75,7 +74,7 @@ public class UserDAO extends DAO{
 		return courseRoster;
 	}
 	
-	public List<User> getUserRole(String role) {
+	public List<User> getUserRole(int role) {
 		List<User> userWithRole = new ArrayList<User>();
 		
 		String query = "SELECT * FROM user WHERE role_id = '"

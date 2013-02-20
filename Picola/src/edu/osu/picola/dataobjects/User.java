@@ -6,10 +6,10 @@ import java.sql.SQLException;
 
 public class User {
 	
-	public static final String INSTRUCTOR = "instructor";
-	public static final String STUDENT = "student";
-	public static final String READ_ONLY = "read_only";
-	public static final String ADMIN = "admin";
+	public static final int INSTRUCTOR = 4; 
+	public static final int STUDENT = 3;
+	public static final int READ_ONLY = 2;
+	public static final int ADMIN = 1;
 	
 	private int user_id;
 	private String f_name;
@@ -20,7 +20,7 @@ public class User {
 	private String profile_decr;
 	private Date last_login_date;
 	private Date last_update;
-	private Date birthday;
+	private Date birthday_date;
 	private String gender;
 	private String role;
 	
@@ -35,10 +35,9 @@ public class User {
 			profile_decr = rs.getString("profile_decr");
 			last_login_date = rs.getDate("last_login_date");
 			last_update = rs.getDate("last_update");
-			birthday = rs.getDate("birthday");
+			birthday_date = rs.getDate("birthday_date");
 			gender = rs.getString("gender");
-			// TODO add role field 
-			// role = res.getstring("role");
+			role = rs.getString("role_id");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -54,7 +53,7 @@ public class User {
 		profile_decr = null;
 		last_login_date = null;
 		last_update = null;
-		birthday = null;
+		birthday_date = null;
 		this.gender = gender;
 		this.role = role;
 	}
@@ -132,11 +131,11 @@ public class User {
 	}
 
 	public Date getBirthday() {
-		return birthday;
+		return birthday_date;
 	}
 
 	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
+		this.birthday_date = birthday;
 	}
 
 	public String getGender() {
