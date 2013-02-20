@@ -6,10 +6,10 @@ import java.sql.SQLException;
 
 public class User {
 	
-	public static final int INSTRUCTOR = 4; 
-	public static final int STUDENT = 3;
-	public static final int READ_ONLY = 2;
-	public static final int ADMIN = 1;
+	public static final int INSTRUCTOR = 1; 
+	public static final int STUDENT = 2;
+	public static final int ADMIN = 3;
+	public static final int READ_ONLY = 4;
 	
 	private int user_id;
 	private String f_name;

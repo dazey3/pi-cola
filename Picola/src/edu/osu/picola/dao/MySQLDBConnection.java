@@ -6,10 +6,10 @@ import java.sql.SQLException;
 
 public class MySQLDBConnection {
 
-	private String DRIVER_CLASS = "com.mysql.jdbc.Driver";
-	private String DB_URL = "jdbc:mysql://localhost:3306/picola";
-	private String USER_NAME = "root";
-	private String PASSWORD = "CSE5911group4";
+	private static final String DRIVER_CLASS = "com.mysql.jdbc.Driver";
+	private static final String DB_URL = "jdbc:mysql://localhost:3306/picola";
+	private static final String USER_NAME = "root";
+	private static final String PASSWORD = "CSE5911group4";
 	private static Connection conn;
 	private static MySQLDBConnection instance;
 	
