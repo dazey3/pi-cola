@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import edu.osu.picola.dataobjects.Post;
+import edu.osu.picola.dataobjects.User;
 
 public class DBConnectionTest {
 // TODO DELETEME once done with me
@@ -14,10 +15,10 @@ public class DBConnectionTest {
 		// TODO Auto-generated method stub
 		Connection conn = MySQLDBConnection.getConnection();
 		UserDAO uDao = new UserDAO(conn);
-		List<String> students = uDao.getClassRoster("1");
+		List<User> students = uDao.getClassRoster(1);
 		System.out.println(students.size());
 		for(int i =0; i < students.size();i++) {
-			System.out.println("studen id = "+ students.get(i));
+			System.out.println("studen id = "+ students.get(i).getDot_number());
 		}
 		PostDAO pDao = new PostDAO(conn);
 		List<Post> posts = pDao.getPostByUserId(1);

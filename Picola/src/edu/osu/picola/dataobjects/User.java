@@ -5,6 +5,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class User {
+	
+	public static final String INSTRUCTOR = "instructor";
+	public static final String STUDENT = "student";
+	public static final String READ_ONLY = "read_only";
+	public static final String ADMIN = "admin";
+	
 	private int user_id;
 	private String f_name;
 	private String l_name;
@@ -16,6 +22,7 @@ public class User {
 	private Date last_update;
 	private Date birthday;
 	private String gender;
+	private String role;
 	
 	public User(ResultSet rs) {
 		try {
@@ -30,12 +37,14 @@ public class User {
 			last_update = rs.getDate("last_update");
 			birthday = rs.getDate("birthday");
 			gender = rs.getString("gender");
+			// TODO add role field 
+			// role = res.getstring("role");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public User(int user_id, String f_name, String l_name, String dot_number, String gender) {
+	public User(int user_id, String f_name, String l_name, String dot_number, String gender, String role) {
 		this.user_id = user_id;
 		this.f_name = f_name;
 		this.l_name = l_name;
@@ -47,6 +56,7 @@ public class User {
 		last_update = null;
 		birthday = null;
 		this.gender = gender;
+		this.role = role;
 	}
 	
 	public int getUser_id() {
@@ -135,5 +145,13 @@ public class User {
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+	
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 }
