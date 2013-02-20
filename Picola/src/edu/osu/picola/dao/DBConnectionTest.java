@@ -15,7 +15,7 @@ public class DBConnectionTest {
 		UserDAO userDAO = new UserDAO(conn);
 		List<User> students =userDAO.getUserRole(User.STUDENT);
 		for (int i = 0; i < students.size();i++) {
-			System.out.println(students.get(i).getF_name());
+			students.get(i).printUser();
 		}
 	}
 }

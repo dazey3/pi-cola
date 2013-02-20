@@ -48,14 +48,29 @@ public class User {
 		this.f_name = f_name;
 		this.l_name = l_name;
 		this.dot_number = dot_number;
-		img_path = null;
-		status = null;
-		profile_decr = null;
+		img_path = "";
+		status = "";
+		profile_decr = "";
 		last_login_date = null;
 		last_update = null;
 		birthday_date = null;
 		this.gender = gender;
 		this.role = role;
+	}
+	
+	public void printUser() {
+		System.out.println("user id = "+user_id);
+		System.out.println("f_name = "+f_name);
+		System.out.println("l_name = "+l_name);
+		System.out.println("dot_number = "+dot_number);
+		System.out.println("img_path = "+ img_path);
+		System.out.println("status = "+ status);
+		System.out.println("profile_decr = "+profile_decr);
+		System.out.println("last_login_date = " + last_login_date);
+		System.out.println("last_update = " + last_update);
+		System.out.println("birthday_date = " + birthday_date);
+		System.out.println("gender = " + gender);
+		System.out.println("role = " +role);
 	}
 	
 	public int getUser_id() {
