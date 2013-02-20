@@ -14,6 +14,10 @@ public class UserDAO extends DAO{
 		super(conn);
 	}
 
+	/**
+	 * @param courseID the course you want
+	 * @return a list of instructors teaching a course
+	 */
 	public List<User> getInstructor(int courseID) {
 		List<User> readOnlyRoster = new ArrayList<User>();
 
@@ -34,6 +38,10 @@ public class UserDAO extends DAO{
 		return readOnlyRoster;
 	}
 	
+	/**
+	 * @param courseID the coure you want
+	 * @return a list of read-only users for course
+	 */
 	public List<User> getReadOnly(int courseID) {
 		List<User> readOnlyRoster = new ArrayList<User>();
 
@@ -54,6 +62,10 @@ public class UserDAO extends DAO{
 		return readOnlyRoster;
 	}
 	
+	/**
+	 * @param courseID the course you want
+	 * @return a list of student users in a course
+	 */
 	public List<User> getClassRoster(int courseID) {
 		List<User> courseRoster = new ArrayList<User>();
 
@@ -74,6 +86,10 @@ public class UserDAO extends DAO{
 		return courseRoster;
 	}
 	
+	/**
+	 * @param role the role you want
+	 * @return return a list of user with a given role
+	 */
 	public List<User> getUserRole(int role) {
 		List<User> userWithRole = new ArrayList<User>();
 		
