@@ -14,9 +14,7 @@ import edu.osu.picola.dataobjects.Post;
  * table.
  * 
  * TODO add queries based off time
- * TODO add SQL for updates
  * @author akers.79
- *
  */
 public class PostDAO extends DAO {
 	public PostDAO(Connection conn) {
@@ -175,7 +173,8 @@ public class PostDAO extends DAO {
 				post.add(new Post(rs));
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			System.out.println("query failed: "+ query);
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
 		

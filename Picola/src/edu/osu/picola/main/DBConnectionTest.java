@@ -9,15 +9,17 @@ import edu.osu.picola.dataobjects.User;
 
 public class DBConnectionTest {
 	/**
-	 * Sample program perform testing of the DAO and
-	 * DO classes.
+	 * Sample program perform testing of the DAO and DO 
+	 * classes.
 	 */
 	public static void main(String[] args) {
 		/* connect to the db */
 		Connection conn = MySQLDBConnection.getConnection();
 		
-		/* create UserDAO with db connection*/
+		/* create UserDAO with db connection */
 		UserDAO userDAO = new UserDAO(conn);
+		
+		// DEMO
 		
 		/* query for all users that role is student */
 		List<User> students = userDAO.getUserRole(User.STUDENT);

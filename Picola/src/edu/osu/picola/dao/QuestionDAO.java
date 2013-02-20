@@ -8,5 +8,5 @@ public class QuestionDAO extends DAO {
 		super(conn);
 	}
 
-	// TODO implement question related SQL
+	// TODO implement Question related SQL
 }

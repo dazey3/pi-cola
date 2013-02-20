@@ -43,6 +43,7 @@ public class GroupDAO extends DAO {
 	/**
 	 * @param group_id the group you want
 	 * @return a list of users in the group
+	 *
 	 * TODO consider group object, though its basically
 	 * as list, might be handy with get all groups in class
 	 */
