@@ -19,8 +19,6 @@ public class DBConnectionTest {
 		/* create UserDAO with db connection */
 		UserDAO userDAO = new UserDAO(conn);
 		
-		// DEMO
-		
 		/* query for all users that role is student */
 		List<User> students = userDAO.getUserRole(User.STUDENT);
 		
