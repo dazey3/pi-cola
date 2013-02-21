@@ -18,7 +18,7 @@ public class QuestionDAO extends DAO {
 		List<Question> questions = new ArrayList<Question>();
 		
 		String query = "SELECT * FROM";
-		
+		//test yan
 		return questions;
 	}
 	
